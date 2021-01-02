@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "checkJs": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "https://cdn.skypack.dev/*": ["node_modules/*", "node_modules/@types/*"]
+    }
+  }
+}
