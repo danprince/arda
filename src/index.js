@@ -5,25 +5,19 @@ import * as Debug from "./utils/debug.js";
 let svg = SVG.createElement("svg", {});
 
 function run() {
-  let width = window.innerWidth;
-  let height = window.innerHeight;
-
-  width = 800;
-  height = 500;
-
   let world = new World({
     seed: Date.now(),
-    width,
-    height,
+    width: 800,
+    height: 500,
   });
 
   svg.innerHTML = "";
-  svg.setAttribute("width", width.toString());
-  svg.setAttribute("height", height.toString());
+  svg.setAttribute("width", world.width.toString());
+  svg.setAttribute("height", world.height.toString());
 
   console.time("svg");
   svg.append(world.render());
-  svg.append(frame(width, height, 10));
+  svg.append(frame(world.width, world.height, 10));
   document.body.append(svg);
   console.timeEnd("svg");
 }

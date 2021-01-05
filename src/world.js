@@ -1,12 +1,11 @@
 import * as Terrain from "./terrain.js";
 import * as SVG from "./utils/svg.js";
-import * as PRNG from "./utils/prng.js";
 
 /**
  * @type {WorldGenerationParams}
  */
 export const WORLD_GENERATION_DEFAULTS = {
-  seed: 0,
+  seed: 42,
   width: 200,
   height: 200,
   seaLevel: 0.5,
